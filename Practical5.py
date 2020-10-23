@@ -1,5 +1,5 @@
 #to search an element from a list and give user the option to perform Linear or Binary search. 
-# 3005 Shravan
+#3005 (New Rollno:372) Shravan SYIT
 class Search :
     def __init__ ( self , list , element ) :
         self.list = list
