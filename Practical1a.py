@@ -1,5 +1,5 @@
 # To store the elements in 1-D array and provide an option to perform the operations like searching, sorting, merging, reversing the elements.
-# 3005 Shravan
+#3005 (New Rollno:372) Shravan SYIT
 class List:
     def __init__(self, lst):
         self.lst = lst
