@@ -1,4 +1,4 @@
-#3005 Shravan
+#3005 (New Rollno:372) Shravan SYIT
 #To create a Stack For implementation of Array.
 class Stack_5:
      def _init_(self):
