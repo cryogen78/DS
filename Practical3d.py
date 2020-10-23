@@ -1,4 +1,4 @@
-#3005 Shravan
+#3005 (New Rollno:372) Shravan SYIT
 factorial = 1
 n = int(input('Enter Number: '))
 for i in range(1,n+1):
