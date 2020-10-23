@@ -2,7 +2,7 @@
 #Implement the following for Hashing:
 #Write a program to implement the concept of linear probing.
 class Hash:
-    def _init_(self, keys, lowerrange, higherrange):
+    def __init__(self, keys, lowerrange, higherrange):
         self.value = self.hashfunction(keys,lowerrange, higherrange)
 
     def get_key_value(self):
@@ -12,7 +12,7 @@ class Hash:
         if lowerrange == 0 and higherrange > 0:
             return keys%(higherrange)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     linear_probing = True
     list_of_keys = [23,43,1,87]
     list_of_list_index = [None,None,None,None]
