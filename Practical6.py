@@ -1,5 +1,5 @@
 #to sort a list of elements. Give user the option to perform sorting using Insertion sort, Bubble sort or Selection sort.
-# 3005 Shravan
+#3005 (New Rollno:372) Shravan SYIT
 class Sort:
     def __init__(self, list):
         self.list = list
