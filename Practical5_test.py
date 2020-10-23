@@ -1,4 +1,4 @@
-#3005 Shravan
+#3005 (New Rollno:372) Shravan SYIT
 #to search an element from a list and give user the option to perform Linear or Binary search. 
 class Search :
     def __init__ ( self , list , element ) :
