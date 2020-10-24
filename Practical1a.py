@@ -1,78 +1,34 @@
 # To store the elements in 1-D array and provide an option to perform the operations like searching, sorting, merging, reversing the elements.
 #3005 (New Rollno:372) Shravan SYIT
-class List:
-    def __init__(self, lst):
-        self.lst = lst
-
-    def linear_search(self, ele):
-        for i in range(len(self.lst)):
-            if self.lst[i] == ele:
-                return i
-        return False
-
-    def bubble_sort(self):
-        sorted_lst = self.lst.copy()
-        for i in range(len(sorted_lst) - 1):
-            for j in range(0, len(sorted_lst) - i - 1):
-                if sorted_lst[j] > sorted_lst[j + 1]:
-                    sorted_lst[j], sorted_lst[j + 1] = sorted_lst[j + 1], sorted_lst[j]
-        return sorted_lst
-
-    def selection_sort(self):
-        sorted_lst = self.lst.copy()
-        for i in range(len(sorted_lst)):
-            min_idx = i
-            for j in range(i + 1, len(sorted_lst)):
-                if sorted_lst[min_idx] > sorted_lst[j]:
-                    min_idx = j
-            sorted_lst[i], sorted_lst[min_idx] = sorted_lst[min_idx], sorted_lst[i]
-        return sorted_lst
-
-    def insertion_sort(self):
-        sorted_lst = self.lst.copy()
-        for i in range(1, len(sorted_lst)):
-            key = sorted_lst[i]
-            j = i - 1
-            while j >= 0 and key < sorted_lst[j]:
-                sorted_lst[j + 1] = sorted_lst[j]
-                j -= 1
-            sorted_lst[j + 1] = key
-        return sorted_lst
-
-    def merge(self, lst_2):
-        merged_lst = self.lst.copy()
-        for e in lst_2:
-            merged_lst.append(e)
-        return merged_lst
-
-    def reverse(self):
-        reversed_lst = []
-        for i in reversed(range(0, len(self.lst))):
-            reversed_lst.append(self.lst[i])
-        return reversed_lst
-
-
-if __name__ == "__main__":
-    test_list = [35, 10, 43, 82, 66, 51, 97]
-    test_list_2 = [11, 36, 44, 52, 67, 83, 98]
-    test_value_1 = 43
-    test_value_2 = 44
-    object_1 = ListOperations(test_list)
-    object_2 = ListOperations(test_list)
+class Array:
+            
+    def linear_search(self,lst,n):
+        for i in range(len(lst)):
+            if lst[i] == n:
+                return f'Position :{i}'
+        return -1
     
+    def insertion_sort(self,lst):
+        for i in range(len(lst)):
+            
+            index = lst[i]
+            
+            k = i - 1
+            
+            while k >= 0 and lst[k] > index:
+                lst[k + 1] = lst[k]
+                k -= 1
+                
+            lst[k+1]  = index
+            
+        return lst
     
-    linear_result_1 = object_1.linear_search(test_value_1)
-    print(linear_result_1)
-    linear_result_2 = object_2.linear_search(test_value_2)
-    print(linear_result_2)
-    bubble_sort = object_1.bubble_sort()
-    print(bubble_sort)
-    selection_sort = object_1.selection_sort()
-    print(selection_sort)
-    insertion_sort = object_1.insertion_sort()
-    print(insertion_sort)
-    merge = object_1.merge(test_list_2)
-    print(merge)
-    reverse = object_1.reverse()
-    print(reverse)
+    def merge(self,lst1,lst2):
+        return Array.insertion_sort(lst1 + lst2)
+    
+    def reverse(self,lst):
+        return lst[::-1]
 
+lst = [2,9,1,7,3,5,2]
+Arrmod = Array()
+print(Arrmod.linear_search(lst,3))
