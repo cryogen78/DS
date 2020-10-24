@@ -1,19 +1,33 @@
 #Write a program to perform the Matrix addition, Multiplication and Transpose Operation. 
 #3005 (New Rollno:372) Shravan SYIT
-class Matrices:
-    def __init__(self, m_1):
-        self.m_1 = m_1
+Mat1 = [[5, 8, -5], 
+      [31,44,94], 
+      [16,108,109]]
 
-    def addition(self, m_2):
-        sum_m = [[None, None, None], [None, None, None], [None, None, None]]
-        for i in range(0, 3):
-            for j in range(0, 3):
-                sum_m[i][j] = self.m_1[i][j] + m_2[i][j]
-        return sum_m
+Mat2 = [[5, 1, -3],
+           [2,6,-8], 
+           [-1,3,3]]
+Mat3 = [[0,0,0,],
+     [0,0,0,],
+     [0,0,0,]]
 
+for i in range(len(Mat1)):
+    for j in range(len(Mat2[0])):
+        for k in range(len(Mat2)):
+            Mat3[i][j] += Mat1[i][k] + Mat2[k][j]
+        
+print(Mat3)
 
-if __name__ == '__main__':
-    matrix_1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    matrix_2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-    matrix = Matrices(matrix_1)
-    print(matrix.addition(matrix_2))
+Mat3 = [[0, 0, 0, 0], 
+        [0, 0, 0, 0], 
+        [0, 0, 0, 0]] 
+
+for i in range(len(Mat1)):
+    for j in range(len(Mat2[0])):
+        for k in range(len(Mat2)):
+            Mat3[i][j] += Mat1[i][k] * Mat2[k][j]
+        
+print(Mat3)
+
+for i in map(list, zip(*Mat1)):
+    print(i)
