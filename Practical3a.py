@@ -1,7 +1,7 @@
 #3005 (New Rollno:372) Shravan SYIT
 #To create a Stack For implementation of Array.
 class Stack_5:
-     def _init_(self):
+     def __init__(self):
          self.container = []  
 
      def isEmpty(self):
