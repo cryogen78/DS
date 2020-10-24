@@ -43,7 +43,7 @@ if __name__ == '__main__':
                 else:
                     list_of_list_index[list_index] = value
 
-       else:
-            list_of_list_index[list_index] = value
+    else:
+        list_of_list_index[list_index] = value
 
     print("After: " + str(list_of_list_index))
