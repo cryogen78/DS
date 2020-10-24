@@ -29,6 +29,6 @@ class Array:
     def reverse(self,lst):
         return lst[::-1]
 
-lst = [2,9,1,7,3,5,2]
+lst = [5,31,44,94,108,109]
 Arrmod = Array()
 print(Arrmod.linear_search(lst,3))
